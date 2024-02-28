@@ -1,28 +1,28 @@
 #include <iostream>
 
-using namespace std; // std ³×ÀÓ½ºÆäÀÌ½ºÀÇ ¸ğµç °ÍÀ» »ç¿ë
+using namespace std; // std ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì˜ ëª¨ë“  ê²ƒì„ ì‚¬ìš©
 
 int main()
 {
 	int inKey;
-	cout << "¼ıÀÚ ÇÏ³ª¸¦ ÀÔ·Â > " << endl;
+	cout << "ìˆ«ì í•˜ë‚˜ë¥¼ ì…ë ¥ > " << endl;
 	cin >> inKey;
 
     for (int i = 0; i <= 10; ++i) {
 
-        // ÀÔ·Â °ªÀÌ 5¸¦ ÀÔ·Â ¹ŞÀ¸¸é 'Bingo'Ãâ·Â
+        // ì…ë ¥ ê°’ì´ 5ë¥¼ ì…ë ¥ ë°›ìœ¼ë©´ 'Bingo'ì¶œë ¥
         if (inKey == 5) { 
             cout << "Bingo" << endl;
             break;
         }
 
-        // ÀÔ·Â °ªÀÌ 5¸¦ ³Ñ¾î¹ö¸®¸é, ³»¸®¶ó°í 'Down' Ãâ·Â
+        // ì…ë ¥ ê°’ì´ 5ë¥¼ ë„˜ì–´ë²„ë¦¬ë©´, ë‚´ë¦¬ë¼ê³  'Down' ì¶œë ¥
         else if (inKey > 5) {
             cout << "Down" << endl;
             break;
         }
 
-        // ÀÔ·Â °ªÀÌ 5º¸´Ù ÀÛÀ¸¸é, ¿Ã¸®¶ó°í 'Up' Ãâ·Â
+        // ì…ë ¥ ê°’ì´ 5ë³´ë‹¤ ì‘ìœ¼ë©´, ì˜¬ë¦¬ë¼ê³  'Up' ì¶œë ¥
         else if (inKey < 5) {
             cout << "Up" << endl;
             break;

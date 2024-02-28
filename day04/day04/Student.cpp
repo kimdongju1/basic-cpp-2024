@@ -5,17 +5,17 @@ using namespace std;
 
 class StudentClass
 {
-	int ID;				// �й��� ���ȭ
-	char name[20];		// ���ڿ� �迭�� �����ϰ� �ٷ� �ʱ�ȭ���� �ʴ� ���� strcpy()�� ���Ͽ� �ʱ�ȭ�Ѵ�.
+	int ID;				// 학번을 상수화
+	char name[20];		// 문자열 배열을 선언하고 바로 초기화하지 않는 경우는 strcpy()를 통하여 초기화한다.
 	char major[20];
 	int age;
 
 public:
-	// ���ڿ��� �ּұ� ������ ������ ������ �־ ����Ѵ�. - ���ڿ��� ù��° ���� �ּҰ� ����ȴ�.
-	// ����̴ϼȶ������ ��ü ������ �ʱ�ȭ�����ʴ� ������� �ʱ�ȭ�Ҷ� ����Ѵ�. �� ��ü������ ������� �̸� �ʱ�ȭ�� �Ǵ� ����鿡 �ʱ�ȭ
+	// 문자열은 주소기 때문에 포인터 변수에 넣어서 사용한다. - 문자열의 첫번째 문자 주소가 저장된다.
+	// 멤버이니셜라이즈는 객체 생성시 초기화되지않는 멤버들은 초기화할때 사용한다. 즉 객체생성과 상관없이 미리 초기화가 되는 멤버들에 초기화
 	StudentClass(int aID, const char* pname, const char* pmajor, int aage) 
-		: ID(aID), age(aage){ // ��� �̴ϼȶ�����
-		strcpy(name, pname);		// ���ڿ��迭�� �����ϰ� �ٷ� �ʱ�ȭ���� �ʴ°��� strcpy()�� ���Ͽ� �ʱ�ȭ�Ѵ�.
+		: ID(aID), age(aage){ // 멤버 이니셜라이즈
+		strcpy(name, pname);		// 문자열배열을 선언하고 바로 초기화하지 않는경우는 strcpy()를 통하여 초기화한다.
 		strcpy(major, pmajor);		// 
 		
 	}
@@ -27,7 +27,7 @@ public:
 
 int main(void)
 {
-	StudentClass s1(2052455, "ȫ�浿", "���ڰ��а�", 29);		// ��ü�� �����ϸ� �����ڸ� ȣ���ؾ� �Ѵ�.
+	StudentClass s1(2052455, "홍길동", "전자공학과", 29);		// 객체를 생성하면 생성자를 호출해야 한다.
 	s1.ShowData();
 	
 

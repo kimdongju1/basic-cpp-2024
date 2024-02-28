@@ -8,7 +8,7 @@ using namespace std;
 
 char* MakeStrAdR(int len)
 {
-	char* str = (char*)malloc(sizeof(char) * len); // C:heap¿µ¿ª¿¡ 20ByteÅ©±â·Î ¸Ş¸ğ¸® ÇÒ´ç
+	char* str = (char*)malloc(sizeof(char) * len); // C:heapì˜ì—­ì— 20Byteí¬ê¸°ë¡œ ë©”ëª¨ë¦¬ í• ë‹¹
 	printf("char size: %llu\n", sizeof(char));
 	return str;
 }

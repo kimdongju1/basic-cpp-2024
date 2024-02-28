@@ -1,6 +1,6 @@
 #include <iostream>
 
-using namespace std; // std ³×ÀÓ½ºÆäÀÌ½ºÀÇ ¸ğµç °ÍÀ» »ç¿ë
+using namespace std; // std ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì˜ ëª¨ë“  ê²ƒì„ ì‚¬ìš©
 
 int main()
 {

@@ -5,24 +5,24 @@ using namespace std;
 class Simple
 {
 public:
-	Simple()		// »ı¼ºÀÚ(Å¬·¡½ºÀÌ¸§°ú °°Àº ¸Ş¼­µå)
+	Simple()		// ìƒì„±ì(í´ë˜ìŠ¤ì´ë¦„ê³¼ ê°™ì€ ë©”ì„œë“œ)
 	{
-		cout << "I'm simple constructor!" << endl; // »ı¼ºÀÚ È£Ãâ ½Ã Ãâ·Â
+		cout << "I'm simple constructor!" << endl; // ìƒì„±ì í˜¸ì¶œ ì‹œ ì¶œë ¥
 	}
 };
 
 int main(void)
 {
 	cout << "case 1: ";
-	Simple* sp1 = new Simple;		// Simple Å¬·¡½ºÀÇ °´Ã¼¸¦ µ¿ÀûÀ¸·Î »ı¼ºÇÏ¿© Æ÷ÀÎÅÍ¿¡ ÇÒ´ç
-	//Aaa *ap = new Aaa; //Aaa Å¬·¡½ºÀÇ °´Ã¼¸¦ µ¿ÀûÀ¸·Î »ı¼ºÇÏ´Â °ÍÀ¸·Î º¸ÀÓ
+	Simple* sp1 = new Simple;		// Simple í´ë˜ìŠ¤ì˜ ê°ì²´ë¥¼ ë™ì ìœ¼ë¡œ ìƒì„±í•˜ì—¬ í¬ì¸í„°ì— í• ë‹¹
+	//Aaa *ap = new Aaa; //Aaa í´ë˜ìŠ¤ì˜ ê°ì²´ë¥¼ ë™ì ìœ¼ë¡œ ìƒì„±í•˜ëŠ” ê²ƒìœ¼ë¡œ ë³´ì„
 
 	cout << "case 2: ";
 	Simple* sp2 = (Simple*)malloc(sizeof(Simple) * 1);
 
-	cout << endl << "end of main" << endl;	// ¸ŞÀÎ ÇÔ¼ö Á¾·á ¸Ş½ÃÁö Ãâ·Â
-	delete sp1;								// µ¿ÀûÀ¸·Î ÇÒ´çµÈ °´Ã¼¸¦ »èÁ¦
-	free(sp2);								// mallocÀ¸·Î ÇÒ´çµÈ ¸Ş¸ğ¸®¸¦ ÇØÁ¦
+	cout << endl << "end of main" << endl;	// ë©”ì¸ í•¨ìˆ˜ ì¢…ë£Œ ë©”ì‹œì§€ ì¶œë ¥
+	delete sp1;								// ë™ì ìœ¼ë¡œ í• ë‹¹ëœ ê°ì²´ë¥¼ ì‚­ì œ
+	free(sp2);								// mallocìœ¼ë¡œ í• ë‹¹ëœ ë©”ëª¨ë¦¬ë¥¼ í•´ì œ
 
 	return 0;
 		

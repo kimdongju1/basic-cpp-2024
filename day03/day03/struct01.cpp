@@ -1,13 +1,13 @@
 /*
-	C Å¸ÀÔÀÇ ±¸Á¶Ã¼ : ±¸Á¶Ã¼ ¸â¹ö·Î º¯¼ö¸¸ °¡Áø´Ù.
+	C íƒ€ì…ì˜ êµ¬ì¡°ì²´ : êµ¬ì¡°ì²´ ë©¤ë²„ë¡œ ë³€ìˆ˜ë§Œ ê°€ì§„ë‹¤.
 */
 #include <stdio.h>
 
-typedef struct human {		// human ±¸Á¶Ã¼(¿©·¯ºĞÀÌ ¸¸µç »ç¿ëÀÚ Á¤ÀÇ ÀÚ·áÇü)
-	char name[20];	// ¼Ó¼º; ¸â¹öº¯¼ö(name, age, job)
+typedef struct human {		// human êµ¬ì¡°ì²´(ì—¬ëŸ¬ë¶„ì´ ë§Œë“  ì‚¬ìš©ì ì •ì˜ ìë£Œí˜•)
+	char name[20];	// ì†ì„±; ë©¤ë²„ë³€ìˆ˜(name, age, job)
 	int age;
 	char job[20];	
-}Human;				// ¾ÕÀ¸·Î human ±¸Á¶Ã¼¸¦ Human À¸·Î »ç¿ëÇÏ°Ú´Ù.
+}Human;				// ì•ìœ¼ë¡œ human êµ¬ì¡°ì²´ë¥¼ Human ìœ¼ë¡œ ì‚¬ìš©í•˜ê² ë‹¤.
 
 void showHuman(Human h)
 {
@@ -17,7 +17,7 @@ void showHuman(Human h)
 int main()
 {
 	int a = 10;
-	human h1 = { "È«±æµ¿", 50, "ÀÇÀû" };		// HumanÅ¸ÀÔÀÇ º¯¼ö¸¦ ¼±¾ğÇÏ°í ÃÊ±âÈ­¸¦ ½ÃÅ²´Ù.
+	human h1 = { "í™ê¸¸ë™", 50, "ì˜ì " };		// Humaníƒ€ì…ì˜ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ê³  ì´ˆê¸°í™”ë¥¼ ì‹œí‚¨ë‹¤.
 	showHuman(h1);
 
 	return 0;

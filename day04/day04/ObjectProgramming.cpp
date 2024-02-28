@@ -16,7 +16,7 @@ int main()
 const int num = 1000;
 
 ClassName objName;
-ClassName*p = new ClassName; // new ¿¬»êÀÚ´Â Èü¿µ¿ª¿¡ ¸Ş¸ğ¸®¸¦ ÇÒ´çÇÏ°í ±× ÁÖ¼Ò¸¦ ¸®ÅÏÇÑ´Ù.
+ClassName*p = new ClassName; // new ì—°ì‚°ìëŠ” í™ì˜ì—­ì— ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹í•˜ê³  ê·¸ ì£¼ì†Œë¥¼ ë¦¬í„´í•œë‹¤.
 
 char a = 'a';
 int* p = &a;

@@ -2,26 +2,26 @@
 using namespace std;
 
 
-class AA	// AA Å¬·¡½º Á¤ÀÇ
+class AA	// AA í´ëž˜ìŠ¤ ì •ì˜
 {
-	int a;		// Á¤¼öÇü ¸â¹ö º¯¼ö a
-	int b;		// Á¤¼öÇü ¸â¹ö º¯¼ö b
+	int a;		// ì •ìˆ˜í˜• ë©¤ë²„ ë³€ìˆ˜ a
+	int b;		// ì •ìˆ˜í˜• ë©¤ë²„ ë³€ìˆ˜ b
 public:	
-	AA(int a, int b) // »ý¼ºÀÚ: µÎ °³ÀÇ Á¤¼ö¸¦ ÀÔ·Â¹Þ¾Æ ¸â¹ö º¯¼ö¸¦ ÃÊ±âÈ­
+	AA(int a, int b) // ìƒì„±ìž: ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ìž…ë ¥ë°›ì•„ ë©¤ë²„ ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”
 	{
-		this->a = a;	// ÀÔ·Â ¹ÞÀº Ã¹ ¹øÂ° Á¤¼ö¸¦ ¸â¹ö º¯¼ö a¿¡ ÀúÀå
-		this->b = b;	// ÀÔ·Â ¹ÞÀº µÎ ¹øÂ° Á¤¼ö¸¦ ¸â¹ö º¯¼ö b¿¡ ÀúÀå
+		this->a = a;	// ìž…ë ¥ ë°›ì€ ì²« ë²ˆì§¸ ì •ìˆ˜ë¥¼ ë©¤ë²„ ë³€ìˆ˜ aì— ì €ìž¥
+		this->b = b;	// ìž…ë ¥ ë°›ì€ ë‘ ë²ˆì§¸ ì •ìˆ˜ë¥¼ ë©¤ë²„ ë³€ìˆ˜ bì— ì €ìž¥
 	}
-	void AAInfo()	 // ¸â¹ö ÇÔ¼ö: °´Ã¼ÀÇ ¸â¹ö º¯¼ö a¿Í b¸¦ Ãâ·Â
+	void AAInfo()	 // ë©¤ë²„ í•¨ìˆ˜: ê°ì²´ì˜ ë©¤ë²„ ë³€ìˆ˜ aì™€ bë¥¼ ì¶œë ¥
 	{
-		cout << a << " " << b << endl;		// ¸â¹ö º¯¼ö a¿Í b¸¦ Ãâ·Â
+		cout << a << " " << b << endl;		// ë©¤ë²„ ë³€ìˆ˜ aì™€ bë¥¼ ì¶œë ¥
 	}
 };
 int main()
 {
-	AA obj1(10, 20);		 // AA Å¬·¡½ºÀÇ °´Ã¼ obj1 »ý¼º ¹× ÃÊ±âÈ­
-	obj1.AAInfo();			// obj1 °´Ã¼ÀÇ ¸â¹ö º¯¼ö °ªÀ» Ãâ·Â
-	AA obj2(obj1);			// º¹»ç »ý¼ºÀÚ¸¦ ÀÌ¿ëÇÏ¿© obj1 °´Ã¼·ÎºÎÅÍ obj2 °´Ã¼¸¦ »ý¼º ¹× ÃÊ±âÈ­
-	obj2.AAInfo();			// obj2 °´Ã¼ÀÇ ¸â¹ö º¯¼ö °ªÀ» Ãâ·Â
+	AA obj1(10, 20);		 // AA í´ëž˜ìŠ¤ì˜ ê°ì²´ obj1 ìƒì„± ë° ì´ˆê¸°í™”
+	obj1.AAInfo();			// obj1 ê°ì²´ì˜ ë©¤ë²„ ë³€ìˆ˜ ê°’ì„ ì¶œë ¥
+	AA obj2(obj1);			// ë³µì‚¬ ìƒì„±ìžë¥¼ ì´ìš©í•˜ì—¬ obj1 ê°ì²´ë¡œë¶€í„° obj2 ê°ì²´ë¥¼ ìƒì„± ë° ì´ˆê¸°í™”
+	obj2.AAInfo();			// obj2 ê°ì²´ì˜ ë©¤ë²„ ë³€ìˆ˜ ê°’ì„ ì¶œë ¥
 	return 0;
 }

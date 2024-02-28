@@ -1,9 +1,9 @@
 #include <iostream>
 
-using namespace std; // std ³×ÀÓ½ºÆäÀÌ½ºÀÇ ¸ğµç °ÍÀ» »ç¿ë
+using namespace std; // std ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì˜ ëª¨ë“  ê²ƒì„ ì‚¬ìš©
 
 /*
-¹İº¹Á¦¾î¹®:while
+ë°˜ë³µì œì–´ë¬¸:while
 */
 int main() {
 
@@ -18,9 +18,9 @@ int main() {
         switch (inKey) {
         case 5:
             cout << "Bingo" << endl;
-            break; // ¹İº¹¹®À» ºüÁ® ³ª¿Ã¶§
+            break; // ë°˜ë³µë¬¸ì„ ë¹ ì ¸ ë‚˜ì˜¬ë•Œ
 
-            // 5º¸´Ù Å« °æ¿ì
+            // 5ë³´ë‹¤ í° ê²½ìš°
         case 6:
         case 7:
         case 8:
@@ -29,7 +29,7 @@ int main() {
             cout << "This is " << inKey << ", Number Down" << endl;
             break;
 
-            // 5º¸´Ù ÀÛÀº °æ¿ì
+            // 5ë³´ë‹¤ ì‘ì€ ê²½ìš°
         case 4:
         case 3:
         case 2:

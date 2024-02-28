@@ -11,7 +11,13 @@ public:
 		this->a = a;
 		this->b = b;
 	}
-	
+	AA(const AA &ref)	// 복사생성자
+	{
+		this->a = ref.a;
+		this->b = ref.b;
+
+	}
+
 	void AAInfo()
 	{
 
@@ -30,5 +36,6 @@ int main(void)
 
 	AA obj2(obj1);
 	obj2.AAInfo();
+
 	return 0;
 }

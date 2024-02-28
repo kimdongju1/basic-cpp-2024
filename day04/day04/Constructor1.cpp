@@ -24,7 +24,7 @@ public:
 	}
 
 	
-	/*SimpleClass(int n1 = 0, int n2 = 0)	// µğÆúÆ® ¸Å°³º¯¼ö 
+	/*SimpleClass(int n1 = 0, int n2 = 0)	// ë””í´íŠ¸ ë§¤ê°œë³€ìˆ˜ 
 	{
 		num1 = n1;
 		num2 = n2;

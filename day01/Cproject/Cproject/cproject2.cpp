@@ -1,9 +1,9 @@
 #include <iostream>
 
-using namespace std; // std ³×ÀÓ½ºÆäÀÌ½ºÀÇ ¸ğµç °ÍÀ» »ç¿ë
+using namespace std; // std ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì˜ ëª¨ë“  ê²ƒì„ ì‚¬ìš©
 
 /*
-if, else ¹®
+if, else ë¬¸
 */
 int main() {
 
@@ -12,17 +12,17 @@ int main() {
 	cin >> inKey;
 
 
-	// inKey°¡ 5ÀÌ¸é, inKey ¼ö ºù°í Ãâ·Â
-	if (inKey == 5) { // if (Á¶°Ç½Ä) {... ½ÇÇà¹®}
+	// inKeyê°€ 5ì´ë©´, inKey ìˆ˜ ë¹™ê³  ì¶œë ¥
+	if (inKey == 5) { // if (ì¡°ê±´ì‹) {... ì‹¤í–‰ë¬¸}
 		cout << "Bingo" << endl;
 	}
 
-	// inKey°¡ 5´Ù Å©¸é, inKey ¼ö ³»·Á°¡¶ó´Â ¸»
+	// inKeyê°€ 5ë‹¤ í¬ë©´, inKey ìˆ˜ ë‚´ë ¤ê°€ë¼ëŠ” ë§
 	else if (inKey > 5) {
 		cout << "Down" << endl;
 	}
 
-	// inKey°¡ 5º¸´Ù ÀÛÀ¸¸é, inKey ¼ö ¿Ã¶ó°¡¶ó´Â ¸»
+	// inKeyê°€ 5ë³´ë‹¤ ì‘ìœ¼ë©´, inKey ìˆ˜ ì˜¬ë¼ê°€ë¼ëŠ” ë§
 	else if (inKey < 5) {
 		cout << "Up" << endl;
 	}

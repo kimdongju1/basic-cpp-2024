@@ -20,14 +20,14 @@ public:
 
 int main(void)
 {
-	SimpleClass sc1();		// ÇÔ¼ö(sc1)ÀÇ ¿øÇü ¼±¾ğ!, 29Çà¿¡ Á¤ÀÇµÇ¾îÀÖ´Â ÇÔ¼ö È£ÃâÀ» À§ÇÑ°Í.
-	SimpleClass mysc = sc1();		// sc1 ÇÔ¼ö¸¦ È£ÃâÇÏ¿©, ÀÌ ¶§ ¹İÈ¯µÇ´Â °´Ã¼ÀÇ °ªÀ¸·Î mysc°´Ã¼¸¦ ÃÊ±âÈ­ÇÏ°í ÀÖ´Ù.
+	SimpleClass sc1();		// í•¨ìˆ˜(sc1)ì˜ ì›í˜• ì„ ì–¸!, 29í–‰ì— ì •ì˜ë˜ì–´ìˆëŠ” í•¨ìˆ˜ í˜¸ì¶œì„ ìœ„í•œê²ƒ.
+	SimpleClass mysc = sc1();		// sc1 í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ì—¬, ì´ ë•Œ ë°˜í™˜ë˜ëŠ” ê°ì²´ì˜ ê°’ìœ¼ë¡œ myscê°ì²´ë¥¼ ì´ˆê¸°í™”í•˜ê³  ìˆë‹¤.
 	mysc.ShowDate();
 	return 0;
 }
 
 SimpleClass sc1()
 {
-	SimpleClass sc(20, 30);		// sc°´Ã¼ »ı¼º, ÀÔ·Â°ª 2°³, Å¸ÀÔ SimpleClass 
+	SimpleClass sc(20, 30);		// scê°ì²´ ìƒì„±, ì…ë ¥ê°’ 2ê°œ, íƒ€ì… SimpleClass 
 	return sc;
 }

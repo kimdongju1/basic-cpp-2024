@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 
-class TwoNumber		// TwoNumber Å¬·¡½º Á¤ÀÇ
+class TwoNumber		// TwoNumber í´ë˜ìŠ¤ ì •ì˜
 
 {
 private:
-	int num1;		// Ã¹ ¹øÂ° Á¤¼ö¸¦ ÀúÀåÇÏ´Â ¸â¹ö º¯¼ö
-	int num2;		// µÎ ¹øÂ° Á¤¼ö¸¦ ÀúÀåÇÏ´Â ¸â¹ö º¯¼ö
+	int num1;		// ì²« ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì €ì¥í•˜ëŠ” ë©¤ë²„ ë³€ìˆ˜
+	int num2;		// ë‘ ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì €ì¥í•˜ëŠ” ë©¤ë²„ ë³€ìˆ˜
 public:
-	TwoNumber(int num1, int num2)		// »ı¼ºÀÚ: µÎ °³ÀÇ Á¤¼ö¸¦ ÀÔ·Â¹Ş¾Æ ¸â¹ö º¯¼ö¿¡ ÀúÀå
+	TwoNumber(int num1, int num2)		// ìƒì„±ì: ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ ë©¤ë²„ ë³€ìˆ˜ì— ì €ì¥
 	{
-		this->num1 = num1;		// ÀÔ·Â¹ŞÀº Ã¹ ¹øÂ° Á¤¼ö¸¦ ¸â¹ö º¯¼ö¿¡ ÀúÀå
-		this->num2 = num2;		// ÀÔ·Â¹ŞÀº µÎ ¹øÂ° Á¤¼ö¸¦ ¸â¹ö º¯¼ö¿¡ ÀúÀå
+		this->num1 = num1;		// ì…ë ¥ë°›ì€ ì²« ë²ˆì§¸ ì •ìˆ˜ë¥¼ ë©¤ë²„ ë³€ìˆ˜ì— ì €ì¥
+		this->num2 = num2;		// ì…ë ¥ë°›ì€ ë‘ ë²ˆì§¸ ì •ìˆ˜ë¥¼ ë©¤ë²„ ë³€ìˆ˜ì— ì €ì¥
 	}
 	/*
 	TwoNumber(int num1, int num2)
@@ -20,16 +20,16 @@ public:
 		//empty
 	}
 	*/
-	void ShowTwoNumber()		// µÎ °³ÀÇ Á¤¼ö¸¦ Ãâ·ÂÇÏ´Â ¸â¹ö ÇÔ¼ö
+	void ShowTwoNumber()		// ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” ë©¤ë²„ í•¨ìˆ˜
 	{
-		cout << this->num1 << endl;		// Ã¹ ¹øÂ° Á¤¼ö Ãâ·Â
-		cout << this->num2 << endl;		// µÎ ¹øÂ° Á¤¼ö Ãâ·Â
+		cout << this->num1 << endl;		// ì²« ë²ˆì§¸ ì •ìˆ˜ ì¶œë ¥
+		cout << this->num2 << endl;		// ë‘ ë²ˆì§¸ ì •ìˆ˜ ì¶œë ¥
 	}
 };
 
 int main(void)
 {
-	TwoNumber two(2, 4);		// TwoNumber Å¬·¡½ºÀÇ °´Ã¼ »ı¼º ¹× ÃÊ±âÈ­
-	two.ShowTwoNumber();		// °´Ã¼ÀÇ µÎ Á¤¼ö Ãâ·Â
+	TwoNumber two(2, 4);		// TwoNumber í´ë˜ìŠ¤ì˜ ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™”
+	two.ShowTwoNumber();		// ê°ì²´ì˜ ë‘ ì •ìˆ˜ ì¶œë ¥
 	return 0;
 }

@@ -5,34 +5,34 @@ using namespace std;
 class SoSimple
 {
 private:
-	int num;		// Á¤¼öÇü ¸â¹ö º¯¼ö
+	int num;		// ì •ìˆ˜í˜• ë©¤ë²„ ë³€ìˆ˜
 public:
-	SoSimple(int num) 		// »ı¼ºÀÚ: Á¤¼ö¸¦ ÀÔ·Â ¹Ş¾Æ °´Ã¼¸¦ ÃÊ±âÈ­ÇÏ°í, °´Ã¼ÀÇ ÁÖ¼Ò¿Í °ªÀ» Ãâ·Â
+	SoSimple(int num) 		// ìƒì„±ì: ì •ìˆ˜ë¥¼ ì…ë ¥ ë°›ì•„ ê°ì²´ë¥¼ ì´ˆê¸°í™”í•˜ê³ , ê°ì²´ì˜ ì£¼ì†Œì™€ ê°’ì„ ì¶œë ¥
 	{
-		this->num = num;		// this´Â °´Ã¼ ÀÚ±â ÀÚ½ÅÀ» °¡¸®Å´
-		cout << "num=" << num << ", ";		// °´Ã¼ÀÇ ¸â¹ö º¯¼ö num Ãâ·Â
-		cout << "address=" << this << endl;		// °´Ã¼ÀÇ ÁÖ¼Ò Ãâ·Â
+		this->num = num;		// thisëŠ” ê°ì²´ ìê¸° ìì‹ ì„ ê°€ë¦¬í‚´
+		cout << "num=" << num << ", ";		// ê°ì²´ì˜ ë©¤ë²„ ë³€ìˆ˜ num ì¶œë ¥
+		cout << "address=" << this << endl;		// ê°ì²´ì˜ ì£¼ì†Œ ì¶œë ¥
 	}
-	void ShowSimpleDate()		// °´Ã¼ÀÇ num °ªÀ» Ãâ·ÂÇÏ´Â ¸Ş¼­µå // ±âÁ¸¿¡ ÀÖ´Â ¸â¹ö ÇÔ¼ö(¸â¹öÇÔ¼ö´Â 1°³) °øÀ¯
+	void ShowSimpleDate()		// ê°ì²´ì˜ num ê°’ì„ ì¶œë ¥í•˜ëŠ” ë©”ì„œë“œ // ê¸°ì¡´ì— ìˆëŠ” ë©¤ë²„ í•¨ìˆ˜(ë©¤ë²„í•¨ìˆ˜ëŠ” 1ê°œ) ê³µìœ 
 	{
-		cout << num << endl;		// °´Ã¼ÀÇ ¸â¹ö º¯¼ö num Ãâ·Â
+		cout << num << endl;		// ê°ì²´ì˜ ë©¤ë²„ ë³€ìˆ˜ num ì¶œë ¥
 	}
-	SoSimple* GetThisPointer()		// °´Ã¼ÀÇ ÁÖ¼Ò¸¦ ¹İÈ¯ÇÏ´Â ¸Ş¼­µå
+	SoSimple* GetThisPointer()		// ê°ì²´ì˜ ì£¼ì†Œë¥¼ ë°˜í™˜í•˜ëŠ” ë©”ì„œë“œ
 	{
-		return this;		// °´Ã¼ÀÇ ÁÖ¼Ò ¹İÈ¯
+		return this;		// ê°ì²´ì˜ ì£¼ì†Œ ë°˜í™˜
 	}
 };
 
 int main(void)
 {
-	SoSimple sim1(100);		// SoSimple Å¬·¡½ºÀÇ °´Ã¼ sim1 »ı¼º
-	SoSimple* ptr1 = sim1.GetThisPointer();		// sim1 °´Ã¼ÀÇ ÁÖ¼Ò °ª ÀúÀå
-	cout << ptr1 << ",";		// sim1 °´Ã¼ÀÇ ÁÖ¼Ò Ãâ·Â
-	ptr1->ShowSimpleDate();		// sim1 °´Ã¼ÀÇ ¸â¹ö º¯¼ö num Ãâ·Â
+	SoSimple sim1(100);		// SoSimple í´ë˜ìŠ¤ì˜ ê°ì²´ sim1 ìƒì„±
+	SoSimple* ptr1 = sim1.GetThisPointer();		// sim1 ê°ì²´ì˜ ì£¼ì†Œ ê°’ ì €ì¥
+	cout << ptr1 << ",";		// sim1 ê°ì²´ì˜ ì£¼ì†Œ ì¶œë ¥
+	ptr1->ShowSimpleDate();		// sim1 ê°ì²´ì˜ ë©¤ë²„ ë³€ìˆ˜ num ì¶œë ¥
 
-	SoSimple sim2(200);		// SoSimple Å¬·¡½ºÀÇ °´Ã¼ sim2 »ı¼º
-	SoSimple* ptr2 = sim2.GetThisPointer();		// sim2 °´Ã¼ÀÇ ÁÖ¼Ò °ª ÀúÀå
-	cout << ptr2 << ", ";		// sim2 °´Ã¼ÀÇ ÁÖ¼Ò Ãâ·Â
-	ptr2->ShowSimpleDate();		// sim2 °´Ã¼ÀÇ ¸â¹ö º¯¼ö num Ãâ·Â
+	SoSimple sim2(200);		// SoSimple í´ë˜ìŠ¤ì˜ ê°ì²´ sim2 ìƒì„±
+	SoSimple* ptr2 = sim2.GetThisPointer();		// sim2 ê°ì²´ì˜ ì£¼ì†Œ ê°’ ì €ì¥
+	cout << ptr2 << ", ";		// sim2 ê°ì²´ì˜ ì£¼ì†Œ ì¶œë ¥
+	ptr2->ShowSimpleDate();		// sim2 ê°ì²´ì˜ ë©¤ë²„ ë³€ìˆ˜ num ì¶œë ¥
 	return 0;
 }

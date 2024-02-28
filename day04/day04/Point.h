@@ -1,6 +1,6 @@
 #ifndef __POINT_H_
 #define __POINT_H_
-// Çì´õÆÄÀÏÀº ¼±¾ğ¹®¸¸ ÀÛ¼º
+// í—¤ë”íŒŒì¼ì€ ì„ ì–¸ë¬¸ë§Œ ì‘ì„±
 class Point
 {
 private:

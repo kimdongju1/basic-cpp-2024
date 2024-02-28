@@ -1,6 +1,6 @@
 /*
-	º¹»ç»ý¼ºÀÚ : °´Ã¼¸¦ º¹»çÇÒ¶§ È£ÃâµÇ´Â »ý¼ºÀÚ
-	µû¶ó¼­ °´Ã¼¸¦ º¹»çÇÒ °´Ã¼¸¦ ÀÔ·ÂÀ¸·Î °¡Á®¾ßÇÏ´Âµ¥ ÀÌ¶§ ¿øº» °´Ã¼ÀÇ ÂüÁ¶¸¦ ÀÔ·ÂÀ¸·Î ¹Þ¾Æ¾ß ÇÑ´Ù.
+	ë³µì‚¬ìƒì„±ìž : ê°ì²´ë¥¼ ë³µì‚¬í• ë•Œ í˜¸ì¶œë˜ëŠ” ìƒì„±ìž
+	ë”°ë¼ì„œ ê°ì²´ë¥¼ ë³µì‚¬í•  ê°ì²´ë¥¼ ìž…ë ¥ìœ¼ë¡œ ê°€ì ¸ì•¼í•˜ëŠ”ë° ì´ë•Œ ì›ë³¸ ê°ì²´ì˜ ì°¸ì¡°ë¥¼ ìž…ë ¥ìœ¼ë¡œ ë°›ì•„ì•¼ í•œë‹¤.
 */
 
 #include <iostream>
@@ -9,13 +9,13 @@ using namespace std;
 class A {
 public:
 	A() {
-		cout << "µðÆúÆ® »ý¼ºÀÚ È£Ãâ" << endl;
+		cout << "ë””í´íŠ¸ ìƒì„±ìž í˜¸ì¶œ" << endl;
 	}
 	A(int n) {
-		cout << "A(int n) »ý¼ºÀÚ È£Ãâ" << endl;
+		cout << "A(int n) ìƒì„±ìž í˜¸ì¶œ" << endl;
 	}
-	A(const A& r) {		// º¹»ç »ý¼ºÀÚ //¿øº» ÇØ´çµÇ´Â ÁÙÀº const ¹«Á¶°Ç ºÙÀÌ´Â°Ô ³ªÀ½
-		cout << "A(const A& r) »ý¼ºÀÚ È£Ãâ" << endl;
+	A(const A& r) {		// ë³µì‚¬ ìƒì„±ìž //ì›ë³¸ í•´ë‹¹ë˜ëŠ” ì¤„ì€ const ë¬´ì¡°ê±´ ë¶™ì´ëŠ”ê²Œ ë‚˜ìŒ
+		cout << "A(const A& r) ìƒì„±ìž í˜¸ì¶œ" << endl;
 	}
 };
 
@@ -26,9 +26,9 @@ void func(int a) {
 int main()
 {
 	int n = 10;
-	A obj1;		// µðÆúÆ® »ý¼ºÀÚ·Î °´Ã¼ »ý¼º 
-	A obj2(10);	// ÀÔ·Â ÇÏ³ª °¡Áö´Â »ý¼ºÀÚ È£Ãâ 
-	A obj3(obj2);	// º¹»ç »ý¼ºÀÚ È£Ãâ 
+	A obj1;		// ë””í´íŠ¸ ìƒì„±ìžë¡œ ê°ì²´ ìƒì„± 
+	A obj2(10);	// ìž…ë ¥ í•˜ë‚˜ ê°€ì§€ëŠ” ìƒì„±ìž í˜¸ì¶œ 
+	A obj3(obj2);	// ë³µì‚¬ ìƒì„±ìž í˜¸ì¶œ 
 	func(n);
 
 	return 0;

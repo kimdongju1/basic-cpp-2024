@@ -1,9 +1,9 @@
 #include <iostream>
 
-using namespace std; // std ³×ÀÓ½ºÆäÀÌ½ºÀÇ ¸ğµç °ÍÀ» »ç¿ë
+using namespace std; // std ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì˜ ëª¨ë“  ê²ƒì„ ì‚¬ìš©
 
 /*
-	¼±ÅÃÁ¦¾î¹®: Switch
+	ì„ íƒì œì–´ë¬¸: Switch
 	
 */
 int main()
@@ -17,7 +17,7 @@ int main()
         cout << "Bingo" << endl;
         break;
 
-    // 5º¸´Ù Å« °æ¿ì
+    // 5ë³´ë‹¤ í° ê²½ìš°
     case 6:
         cout << "This is 6, Number Down" << endl; 
         break;
@@ -34,7 +34,7 @@ int main()
         cout << "This is 10, Number Down" << endl;
         break;
 
-    // 5º¸´Ù ÀÛÀº °æ¿ì
+    // 5ë³´ë‹¤ ì‘ì€ ê²½ìš°
     
     case 4: 
         cout << "This is 4, Number Up" << endl;
@@ -52,15 +52,15 @@ int main()
         cout << "This is 0, Number Up" << endl;
         break;
     default:
-        cout << "Invalid input" << endl; // ±âº»ÀûÀ¸·Î ´Ù¸¥ ÀÔ·Â °ª
+        cout << "Invalid input" << endl; // ê¸°ë³¸ì ìœ¼ë¡œ ë‹¤ë¥¸ ì…ë ¥ ê°’
     }
 
 
 	return 0;
 }
 
-// break ¹® 
-// -> case¿¡ break ¹® ²À »ç¿ë!! break ¾ø¾îÁö¸é, ´ÙÀ½ case Ãâ·Â°ªµµ ³ª¿È
+// break ë¬¸ 
+// -> caseì— break ë¬¸ ê¼­ ì‚¬ìš©!! break ì—†ì–´ì§€ë©´, ë‹¤ìŒ case ì¶œë ¥ê°’ë„ ë‚˜ì˜´
 
-// default ¹® 
-// -> ¸¸¾à À§¿¡ ÀÖ´Â ¼ıÀÚ ÀÌ¿Ü¿¡ ¼ıÀÚ ÀûÀ» ½Ã Invaild input Ãâ·Â
+// default ë¬¸ 
+// -> ë§Œì•½ ìœ„ì— ìˆëŠ” ìˆ«ì ì´ì™¸ì— ìˆ«ì ì ì„ ì‹œ Invaild input ì¶œë ¥

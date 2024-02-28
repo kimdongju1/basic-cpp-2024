@@ -1,13 +1,13 @@
 #pragma once
 
 /*
-	Filedivi.h Çì´õÆÄÀÏ : ¼±¾ğ 
+	Filedivi.h í—¤ë”íŒŒì¼ : ì„ ì–¸ 
 */
 class AClass {
 private:
 	int num;
 
-public:				// Á¢±ÙÁ¦¾îÁö½ÃÀÚ
+public:				// ì ‘ê·¼ì œì–´ì§€ì‹œì
 	char name[20];
 	int age;
 	char job[20];

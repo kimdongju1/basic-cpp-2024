@@ -2,36 +2,36 @@
 #include <cstring>
 using namespace std;
 
-class Person	// Person Å¬·¡½º Á¤ÀÇ
+class Person	// Person í´ë˜ìŠ¤ ì •ì˜
 {
 private:
-	char* name;		// ¹®ÀÚ¿­À» ÀúÀåÇÏ±â À§ÇÑ Æ÷ÀÎÅÍ ¸â¹ö
-	int age;		// ³ªÀÌ¸¦ ÀúÀåÇÏ´Â Á¤¼öÇü ¸â¹ö
+	char* name;		// ë¬¸ìì—´ì„ ì €ì¥í•˜ê¸° ìœ„í•œ í¬ì¸í„° ë©¤ë²„
+	int age;		// ë‚˜ì´ë¥¼ ì €ì¥í•˜ëŠ” ì •ìˆ˜í˜• ë©¤ë²„
 public:
-	Person(const char* myname, int myage)		// ÀÔ·Â 2°³¸¦ °®´Â »ı¼ºÀÚ(ÀÌ¸§°ú ³ªÀÌ¸¦ ¹Ş¾Æ¼­ °´Ã¼¸¦ ÃÊ±âÈ­)
+	Person(const char* myname, int myage)		// ì…ë ¥ 2ê°œë¥¼ ê°–ëŠ” ìƒì„±ì(ì´ë¦„ê³¼ ë‚˜ì´ë¥¼ ë°›ì•„ì„œ ê°ì²´ë¥¼ ì´ˆê¸°í™”)
 	{
-		int len = strlen(myname) + 1;	// strlen()Àº ¹®ÀÚ¿­ ±æÀÌ ±¸ÇÏ´Â ÇÔ¼ö , ¹®ÀÚ¿­À» ³ªÅ¸³»·Á¸é +1 ÇØ¾ßÇÔ(¹®ÀÚ¸¸ ³ªÅ¸³»¸é »ó°ü¾øÀ½)
-		name = new char[len];			// µ¿Àû ÇÒ´çÇÏ¿© name Æ÷ÀÎÅÍ¿¡ ÀúÀå
-		strcpy(name, myname);			// ¹ŞÀº ÀÌ¸§À» name¿¡ º¹»ç
-		age = myage;					// ³ªÀÌ¸¦ ¼³Á¤
+		int len = strlen(myname) + 1;	// strlen()ì€ ë¬¸ìì—´ ê¸¸ì´ êµ¬í•˜ëŠ” í•¨ìˆ˜ , ë¬¸ìì—´ì„ ë‚˜íƒ€ë‚´ë ¤ë©´ +1 í•´ì•¼í•¨(ë¬¸ìë§Œ ë‚˜íƒ€ë‚´ë©´ ìƒê´€ì—†ìŒ)
+		name = new char[len];			// ë™ì  í• ë‹¹í•˜ì—¬ name í¬ì¸í„°ì— ì €ì¥
+		strcpy(name, myname);			// ë°›ì€ ì´ë¦„ì„ nameì— ë³µì‚¬
+		age = myage;					// ë‚˜ì´ë¥¼ ì„¤ì •
 	}
-	void ShowPersonInfo() const			// Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ÇÔ¼ö
+	void ShowPersonInfo() const			// ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
 	{
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "ë‚˜ì´: " << age << endl;
 	}
-	~Person()							// ¼Ò¸êÀÚ: µ¿ÀûÀ¸·Î ÇÒ´çµÈ ¸Ş¸ğ¸®¸¦ ÇØÁ¦
+	~Person()							// ì†Œë©¸ì: ë™ì ìœ¼ë¡œ í• ë‹¹ëœ ë©”ëª¨ë¦¬ë¥¼ í•´ì œ
 	{
-		delete[]name;					// name Æ÷ÀÎÅÍ°¡ °¡¸®Å°´Â ¸Ş¸ğ¸®¸¦ ÇØÁ¦
-		cout << "called destructor!" << endl;	// ¼Ò¸êÀÚ°¡ È£ÃâµÊÀ» ¾Ë¸®´Â ¸Ş½ÃÁö Ãâ·Â
+		delete[]name;					// name í¬ì¸í„°ê°€ ê°€ë¦¬í‚¤ëŠ” ë©”ëª¨ë¦¬ë¥¼ í•´ì œ
+		cout << "called destructor!" << endl;	// ì†Œë©¸ìê°€ í˜¸ì¶œë¨ì„ ì•Œë¦¬ëŠ” ë©”ì‹œì§€ ì¶œë ¥
 	}
 };
 
-int main(void)							// ¸ŞÀÎ ÇÔ¼ö
+int main(void)							// ë©”ì¸ í•¨ìˆ˜
 {
-	Person man1("Lee dong woo", 29);	// Person Å¬·¡½ºÀÇ °´Ã¼ »ı¼º ¹× ÃÊ±âÈ­
+	Person man1("Lee dong woo", 29);	// Person í´ë˜ìŠ¤ì˜ ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™”
 	Person man2("Jang dong gun", 41);
-	man1.ShowPersonInfo();				// °´Ã¼ÀÇ Á¤º¸ Ãâ·Â
+	man1.ShowPersonInfo();				// ê°ì²´ì˜ ì •ë³´ ì¶œë ¥
 	man2.ShowPersonInfo();
 	return 0;
 }

@@ -1,42 +1,42 @@
 #include <iostream>
 using namespace std;
 
-class AAA	// AAA Å¬·¡½º Á¤ÀÇ
+class AAA	// AAA í´ë˜ìŠ¤ ì •ì˜
 {
 public:
-	AAA()	// AAA Å¬·¡½ºÀÇ ±âº» »ı¼ºÀÚ
+	AAA()	// AAA í´ë˜ìŠ¤ì˜ ê¸°ë³¸ ìƒì„±ì
 	{
-		cout << "empty object" << endl;		// °´Ã¼ »ı¼º½Ã "empty object" Ãâ·Â
+		cout << "empty object" << endl;		// ê°ì²´ ìƒì„±ì‹œ "empty object" ì¶œë ¥
 	}
-	void ShowYourName()		// AAA Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö
+	void ShowYourName()		// AAA í´ë˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜
 	{
-		cout << "I'm class AAA" << endl;	// AAA Å¬·¡½º ÀÌ¸§ Ãâ·Â
+		cout << "I'm class AAA" << endl;	// AAA í´ë˜ìŠ¤ ì´ë¦„ ì¶œë ¥
 	}
 };
 
-class BBB	// BBB Å¬·¡½ºÀÇ Á¤ÀÇ
+class BBB	// BBB í´ë˜ìŠ¤ì˜ ì •ì˜
 {
 private:
-	AAA& ref;		// AAA Å¬·¡½ºÀÇ ÂüÁ¶¸¦ ¸â¹ö·Î °¡Áü
-	const int& num;		// Á¤¼öÇü »ó¼öÀÇ ÂüÁ¶¸¦ ¸â¹ö·Î °¡Áü
+	AAA& ref;		// AAA í´ë˜ìŠ¤ì˜ ì°¸ì¡°ë¥¼ ë©¤ë²„ë¡œ ê°€ì§
+	const int& num;		// ì •ìˆ˜í˜• ìƒìˆ˜ì˜ ì°¸ì¡°ë¥¼ ë©¤ë²„ë¡œ ê°€ì§
 
 public:
-	BBB(AAA &r, const int &n)	// BBB Å¬·¡½ºÀÇ »ı¼ºÀÚ
-		: ref(r), num(n)		// ÃÊ±âÈ­ ¸®½ºÆ®¸¦ »ç¿ëÇÏ¿© ¸â¹ö º¯¼ö ÃÊ±âÈ­
-	{ // empty constructor body (ºñ¾îÀÖ´Â »ı¼ºÀÚ º»Ã¼)
+	BBB(AAA &r, const int &n)	// BBB í´ë˜ìŠ¤ì˜ ìƒì„±ì
+		: ref(r), num(n)		// ì´ˆê¸°í™” ë¦¬ìŠ¤íŠ¸ë¥¼ ì‚¬ìš©í•˜ì—¬ ë©¤ë²„ ë³€ìˆ˜ ì´ˆê¸°í™”
+	{ // empty constructor body (ë¹„ì–´ìˆëŠ” ìƒì„±ì ë³¸ì²´)
 	}
-	void ShowYourName()		// BBB Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö
+	void ShowYourName()		// BBB í´ë˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜
 	{
-		ref.ShowYourName();		// AAA °´Ã¼ÀÇ ShowYourName() ÇÔ¼ö È£ÃâÇÏ¿© AAA Å¬·¡½º ÀÌ¸§ Ãâ·Â
-		cout << "and" << endl;	// "and" Ãâ·Â
-		cout << "I ref num" << num << endl;	// Á¤¼öÇü »ó¼ö ÂüÁ¶ °ª Ãâ·Â
+		ref.ShowYourName();		// AAA ê°ì²´ì˜ ShowYourName() í•¨ìˆ˜ í˜¸ì¶œí•˜ì—¬ AAA í´ë˜ìŠ¤ ì´ë¦„ ì¶œë ¥
+		cout << "and" << endl;	// "and" ì¶œë ¥
+		cout << "I ref num" << num << endl;	// ì •ìˆ˜í˜• ìƒìˆ˜ ì°¸ì¡° ê°’ ì¶œë ¥
 	}
 };
 
 int main(void)
 {
-	AAA obj1;	// AAA Å¬·¡½ºÀÇ °´Ã¼ »ı¼º
-	BBB obj2(obj1, 20);	// BBB Å¬·¡½ºÀÇ °´Ã¼ »ı¼º. obj1À» ÂüÁ¶ÇÏ°í, Á¤¼öÇü »ó¼ö 20À» Àü´ŞÇÔ
-	obj2.ShowYourName();	// BBB Å¬·¡½ºÀÇ ShowYourName() ÇÔ¼ö È£Ãâ
+	AAA obj1;	// AAA í´ë˜ìŠ¤ì˜ ê°ì²´ ìƒì„±
+	BBB obj2(obj1, 20);	// BBB í´ë˜ìŠ¤ì˜ ê°ì²´ ìƒì„±. obj1ì„ ì°¸ì¡°í•˜ê³ , ì •ìˆ˜í˜• ìƒìˆ˜ 20ì„ ì „ë‹¬í•¨
+	obj2.ShowYourName();	// BBB í´ë˜ìŠ¤ì˜ ShowYourName() í•¨ìˆ˜ í˜¸ì¶œ
 	return 0;
 }

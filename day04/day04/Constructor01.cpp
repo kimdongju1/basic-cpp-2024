@@ -5,12 +5,12 @@ class MyClass{
 	int num;
 
 public:
-	MyClass(){ // default »ı¼ºÀÚ
-		cout << "»ı¼ºÀÚ È£Ãâ: MyClass()" << endl;
+	MyClass(){ // default ìƒì„±ì
+		cout << "ìƒì„±ì í˜¸ì¶œ: MyClass()" << endl;
 		num = 10;
 	}
 	MyClass(int anum) {
-		cout << "»ı¼ºÀÚ È£Ãâ: MyClass(int)" << endl;
+		cout << "ìƒì„±ì í˜¸ì¶œ: MyClass(int)" << endl;
 		num = anum;
 	}
 	void MyClassInfo() {
@@ -21,11 +21,11 @@ public:
 int main()
 {
 	//MyClass *m = new MyClass();
-	MyClass m1;		// °´Ã¼»ı¼º ¸í·ÉÀ¸·Î »ı¼ºÀÚ´Â ÀÚµ¿ È£Ãâ µÈ´Ù.
+	MyClass m1;		// ê°ì²´ìƒì„± ëª…ë ¹ìœ¼ë¡œ ìƒì„±ìëŠ” ìë™ í˜¸ì¶œ ëœë‹¤.
 	m1.MyClassInfo();
-	MyClass m2(20);	// 12Çà
+	MyClass m2(20);	// 12í–‰
 	m2.MyClassInfo();
 	//MyClass m2();
-	// »ı¼ºÀÚ ¸¸µé¸é ÀÚµ¿À¸·Î µğÆúµå »ı¼ºÀÚ°¡ È£ÃâµÈ´Ù, ÀÔ·ÂÀ» ÇÏ³ª °®´Â »ı¼ºÀÚ , ÀÔ·Â °ªÀ» °®Áö¾Ê´Â °´Ã¼´Â µğÆúÆ® »ı¼ºÀÚ°¡ ÀÖ¾î¾ß »ı¼ºµÊ
+	// ìƒì„±ì ë§Œë“¤ë©´ ìë™ìœ¼ë¡œ ë””í´ë“œ ìƒì„±ìê°€ í˜¸ì¶œëœë‹¤, ì…ë ¥ì„ í•˜ë‚˜ ê°–ëŠ” ìƒì„±ì , ì…ë ¥ ê°’ì„ ê°–ì§€ì•ŠëŠ” ê°ì²´ëŠ” ë””í´íŠ¸ ìƒì„±ìê°€ ìˆì–´ì•¼ ìƒì„±ë¨
 	return 0;
 }

@@ -1,11 +1,11 @@
 #include <iostream>
 
-// adder ÇÔ¼öÀÇ ¼±¾ğ: µÎ °³ÀÇ Á¤¼ö¸¦ ¸Å°³º¯¼ö·Î ¹Ş°í, ±âº»°ªÀ¸·Î °¢°¢ num1 = 1°ú num2 = 2¸¦ °¡Áü
+// adder í•¨ìˆ˜ì˜ ì„ ì–¸: ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ê³ , ê¸°ë³¸ê°’ìœ¼ë¡œ ê°ê° num1 = 1ê³¼ num2 = 2ë¥¼ ê°€ì§
 int BoxVolume(int length, int width = 1, int height = 1);
 
 int main(void)
 {
-    // adder ÇÔ¼ö È£Ãâ ¹× °á°ú Ãâ·Â
+    // adder í•¨ìˆ˜ í˜¸ì¶œ ë° ê²°ê³¼ ì¶œë ¥
     std::cout << "[3, 3, 3] :" << BoxVolume(3,3,3) << std::endl;     // 1 + 2 = 3
     std::cout << "[5, 5, D] :" << BoxVolume(5,5) << std::endl;
     std::cout << "[7, D, D] :" << BoxVolume(7) << std::endl;
@@ -14,7 +14,7 @@ int main(void)
     return 0;
 }
 
-// adder ÇÔ¼öÀÇ Á¤ÀÇ: µÎ °³ÀÇ Á¤¼ö¸¦ ¸Å°³º¯¼ö·Î ¹Ş¾Æ¼­ ÇÕÀ» ¹İÈ¯
+// adder í•¨ìˆ˜ì˜ ì •ì˜: ë‘ ê°œì˜ ì •ìˆ˜ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ì„œ í•©ì„ ë°˜í™˜
 int adder(int num1, int num2) {
     return num1 + num2;
 }

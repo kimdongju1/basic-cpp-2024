@@ -9,7 +9,7 @@ using namespace std;
 char* MakeStrAdR(int len)
 {
 	//char* str = (char*)malloc(sizeof(char) * len); 
-	char* str = new char[len];				// C++: Èü¿µ¿ª¿¡ len Å©±â¸¸Å­ ¸Ş¸ğ¸® °ø°£ ÇÒ´ç 
+	char* str = new char[len];				// C++: í™ì˜ì—­ì— len í¬ê¸°ë§Œí¼ ë©”ëª¨ë¦¬ ê³µê°„ í• ë‹¹ 
 	return str;
 }
 
@@ -19,6 +19,6 @@ int main(void)
 	strcpy(str, "I am so happy~");
 	cout << str << endl;
 	//free(str);
-	delete []str;					// C++: ÇÒ´ç¹ŞÀº ¸Ş¸ğ¸®¸¦ ¹İÈ¯
+	delete []str;					// C++: í• ë‹¹ë°›ì€ ë©”ëª¨ë¦¬ë¥¼ ë°˜í™˜
 	return 0;
 }
