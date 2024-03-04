@@ -21,6 +21,12 @@ public:
 
 int main(void)
 {
+	//Student* ptr0 = new Student();		원칙은 동일한 타입으로 사용하는것이 원칙이다.
+	/*
+		부모타입의 객체 포인터로 자식 객체를 가리킬 수 있다.
+		하지만 자식타입의 객체 포인터로 부모 객체는 가리킬 수 없다.
+		그리고 접근은 객체 포인터의 타입을 따른다.
+	*/
 	Person* ptr1 = new Student();
 	Person* ptr2 = new PartTimeStudent();
 	Student* ptr3 = new PartTimeStudent();
