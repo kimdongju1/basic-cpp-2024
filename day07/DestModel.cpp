@@ -14,7 +14,7 @@ public:
 	}
 	~Person()
 	{
-		cout << "ºÎ¸ğ ¼Ò¸êÀÚ" << endl;
+		cout << "ë¶€ëª¨ ì†Œë©¸ì" << endl;
 		delete[]name;
 	}
 	void WhatYourName() const
@@ -36,7 +36,7 @@ public:
 	}
 	~UnivStudent()
 	{
-		cout << "ÀÚ½Ä ¼Ò¸êÀÚ" << endl;
+		cout << "ìì‹ ì†Œë©¸ì" << endl;
 		delete[]major;
 	}
 	void WhoAreYou() const 

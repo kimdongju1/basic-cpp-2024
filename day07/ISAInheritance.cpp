@@ -13,7 +13,7 @@ public:
 	}
 	void Calculate()
 	{
-		cout << "¿äÃ» ³»¿ëÀ» °è»êÇÕ´Ï´Ù." << endl;
+		cout << "ìš”ì²­ ë‚´ìš©ì„ ê³„ì‚°í•©ë‹ˆë‹¤." << endl;
 	}
 };
 
@@ -31,10 +31,10 @@ public:
 	{
 		if(GetBatteryInfo() < 1)
 		{
-			cout << "ÃæÀüÀÌ ÇÊ¿äÇÕ´Ï´Ù." << endl;
+			cout << "ì¶©ì „ì´ í•„ìš”í•©ë‹ˆë‹¤." << endl;
 			return;
 		}
-		cout << "ÀÌµ¿ÇÏ¸é¼­ ";
+		cout << "ì´ë™í•˜ë©´ì„œ ";
 		Calculate();
 		UseBattery();
 	}
@@ -55,23 +55,23 @@ public:
 	{
 		if (GetBatteryInfo() < 1)
 		{
-			cout << "ÃæÀüÀÌ ÇÊ¿äÇÕ´Ï´Ù." << endl;
+			cout << "ì¶©ì „ì´ í•„ìš”í•©ë‹ˆë‹¤." << endl;
 			return;
 		}
 		if (strcmp(regstPenModel, penInfo) != 0)
 		{
-			cout << "µî·ÏµÈ ÆæÀÌ ¾Æ´Õ´Ï´Ù.";
+			cout << "ë“±ë¡ëœ íŽœì´ ì•„ë‹™ë‹ˆë‹¤.";
 			return;
 		}
-		cout << "ÇÊ±â ³»¿ëÀ» Ã³¸®ÇÕ´Ï´Ù." << endl;
+		cout << "í•„ê¸° ë‚´ìš©ì„ ì²˜ë¦¬í•©ë‹ˆë‹¤." << endl;
 		UseBattery();
 	}
 };
 
 int main(void)
 {
-		NotebookComp nc("ÀÌ¼öÁ¾", 5);
-		TableNotebook tn("Á¤¼ö¿µ", 5, "ISE-241-242");
+		NotebookComp nc("ì´ìˆ˜ì¢…", 5);
+		TableNotebook tn("ì •ìˆ˜ì˜", 5, "ISE-241-242");
 		nc.MovingCal();
 		tn.Write("ISE-241-242");
 		return 0;

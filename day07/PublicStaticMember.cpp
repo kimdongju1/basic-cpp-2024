@@ -3,26 +3,26 @@ using namespace std;
 
 class SoSimple
 {
-public:							// Á¢±ÙÁ¦ÇÑÀÌ public
-	static int simObjCnt;		// static ¸â¹öº¯¼ö°¡ publicÀ¸·Î ¼±¾ğµÇ¾ú´Ù.(Å¬·¡½º ¸â¹ö)
-public:		// ºÒÇÊ¿äÇÏÁö¸¸ º¯¼ö¿Í ÇÔ¼öÀÇ ±¸ºĞÀ» ¸ñÀûÀ¸·Î »ğÀÔÇÏ±âµµ ÇÔ
+public:							// ì ‘ê·¼ì œí•œì´ public
+	static int simObjCnt;		// static ë©¤ë²„ë³€ìˆ˜ê°€ publicìœ¼ë¡œ ì„ ì–¸ë˜ì—ˆë‹¤.(í´ë˜ìŠ¤ ë©¤ë²„)
+public:		// ë¶ˆí•„ìš”í•˜ì§€ë§Œ ë³€ìˆ˜ì™€ í•¨ìˆ˜ì˜ êµ¬ë¶„ì„ ëª©ì ìœ¼ë¡œ ì‚½ì…í•˜ê¸°ë„ í•¨
 	SoSimple()
 	{
 		simObjCnt++;
 	}
 };
-int SoSimple::simObjCnt = 0;		// static ¸â¹öº¯¼ö´Â Ç×»ó ÀÌ·¸°Ô ÃÊ±âÈ­¸¦ ÁøÇàÇÑ´Ù.
+int SoSimple::simObjCnt = 0;		// static ë©¤ë²„ë³€ìˆ˜ëŠ” í•­ìƒ ì´ë ‡ê²Œ ì´ˆê¸°í™”ë¥¼ ì§„í–‰í•œë‹¤.
 
 int main(void)
 {
-	cout << SoSimple::simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;		// ÇöÀç SoSimple °´Ã¼¸¦ ÇÏ³ªµµ »ı¼ºÇÏÁö ¾ÊÀº »óÅÂ,
-	// ±×·³¿¡µµ ºÒ±¸ÇÏ°í Å¬·¡½ºÀÇ ÀÌ¸§À» ÀÌ¿ëÇØ¼­ simObjCnt¿¡ Á¢±ÙÇÏ°í ÀÖ´Ù(static ¸â¹öº¯¼ö°¡ °´Ã¼ ³»¿¡ Á¸ÀçÇÏÁö¾ÊÀ½À» Áõ¸íÇÏ´Â ³»¿ëÀÌ´Ù.)
-	// Áï, publicÀ¸·Î ¼±¾ğµÈ static ¸â¹ö´Â ÀÌ·± ½ÄÀ¸·Î ¾îµğ¼­µç Á¢±ÙÀÌ °¡´ÉÇÏ´Ù.		
+	cout << SoSimple::simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;		// í˜„ì¬ SoSimple ê°ì²´ë¥¼ í•˜ë‚˜ë„ ìƒì„±í•˜ì§€ ì•Šì€ ìƒíƒœ,
+	// ê·¸ëŸ¼ì—ë„ ë¶ˆêµ¬í•˜ê³  í´ë˜ìŠ¤ì˜ ì´ë¦„ì„ ì´ìš©í•´ì„œ simObjCntì— ì ‘ê·¼í•˜ê³  ìˆë‹¤(static ë©¤ë²„ë³€ìˆ˜ê°€ ê°ì²´ ë‚´ì— ì¡´ì¬í•˜ì§€ì•ŠìŒì„ ì¦ëª…í•˜ëŠ” ë‚´ìš©ì´ë‹¤.)
+	// ì¦‰, publicìœ¼ë¡œ ì„ ì–¸ëœ static ë©¤ë²„ëŠ” ì´ëŸ° ì‹ìœ¼ë¡œ ì–´ë””ì„œë“  ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤.		
 	SoSimple sim1;
 	SoSimple sim2;
 
-	cout << SoSimple::simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;
-	cout << sim1.simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;		// sim1,sim2¸¦ ÀÌ¿ëÇØ¼­µµ static ¸â¹öº¯¼ö¿¡ Á¢±ÙÀÌ °¡´ÉÇÏ´Ù.
-	cout << sim2.simObjCnt << "¹ø¤Š SoSimple °´Ã¼" << endl;		// ÇÏÁö¸¸ ÀÌ·¯ÇÑ ÇüÅÂÀÇ Á¢±ÙÀº ÃßÃµÇÏÁö¾Ê´Â´Ù. ¸â¹öº¯¼ö¿¡ Á¢±ÙÇÏ´Â °Í°ú °°Àº ¿ÀÇØ¸¦ ºÒ·¯ÀÏÀ¸Å°±â ¶§¹®.
+	cout << SoSimple::simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;
+	cout << sim1.simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;		// sim1,sim2ë¥¼ ì´ìš©í•´ì„œë„ static ë©¤ë²„ë³€ìˆ˜ì— ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤.
+	cout << sim2.simObjCnt << "ë²ˆ? SoSimple ê°ì²´" << endl;		// í•˜ì§€ë§Œ ì´ëŸ¬í•œ í˜•íƒœì˜ ì ‘ê·¼ì€ ì¶”ì²œí•˜ì§€ì•ŠëŠ”ë‹¤. ë©¤ë²„ë³€ìˆ˜ì— ì ‘ê·¼í•˜ëŠ” ê²ƒê³¼ ê°™ì€ ì˜¤í•´ë¥¼ ë¶ˆëŸ¬ì¼ìœ¼í‚¤ê¸° ë•Œë¬¸.
 	return 0;
 }

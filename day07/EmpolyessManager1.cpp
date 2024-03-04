@@ -5,7 +5,7 @@ class PermanentWorkter
 {
 private:
 	char name[100];
-	int salary;		// ¸Å´Ş ÁöºÒÇØ¾ß ÇÏ´Â ±Ş¿©¾×
+	int salary;		// ë§¤ë‹¬ ì§€ë¶ˆí•´ì•¼ í•˜ëŠ” ê¸‰ì—¬ì•¡
 public:
 	PermanentWorkter(const char* name, int money)
 		: salary(money)
@@ -26,19 +26,19 @@ public:
 class EmployeeHandler
 {
 private:
-	PermanentWorkter* empList[50];		// °´Ã¼Æ÷ÀÎÅÍ ¹è¿­ 
+	PermanentWorkter* empList[50];		// ê°ì²´í¬ì¸í„° ë°°ì—´ 
 	int empNum;
 public:
 	EmployeeHandler() : empNum(0)
 	{ }
-	void AddEmployee(PermanentWorkter* emp)		// Á¤±ÔÁ÷ °´Ã¼ÀÇ Æ÷ÀÎÅÍ¸¦ ¹Ş¾Æ¼­ empList ¹è¿­¿¡ Áı¾î³Ö´Â´Ù.
+	void AddEmployee(PermanentWorkter* emp)		// ì •ê·œì§ ê°ì²´ì˜ í¬ì¸í„°ë¥¼ ë°›ì•„ì„œ empList ë°°ì—´ì— ì§‘ì–´ë„£ëŠ”ë‹¤.
 	{
 		empList[empNum++] = emp;
 	}
 	void ShowAllSalaryInfo() const
 	{
 		for (int i = 0; i < empNum; i++)
-			empList[i]->ShowSalaryInfo();	// empList¹è¿­ÀÇ ¿ä¼Ò°ª(°´Ã¼ÁÖ¼Ò)À» ÅëÇØ¼­ ¸â¹öÇÔ¼ö¿¡ Á¢±Ù 
+			empList[i]->ShowSalaryInfo();	// empListë°°ì—´ì˜ ìš”ì†Œê°’(ê°ì²´ì£¼ì†Œ)ì„ í†µí•´ì„œ ë©¤ë²„í•¨ìˆ˜ì— ì ‘ê·¼ 
 	}
 	void ShowTotalSalary() const
 	{
@@ -56,18 +56,18 @@ public:
 
 int main(void)
 {
-	// Á÷¿ø°ü¸®¸¦ ¸ñÀûÀ¸·Î ¼³°èµÈ ÄÁÆ®·Ñ Å¬·¡½ºÀÇ °´Ã¼»ı¼º
+	// ì§ì›ê´€ë¦¬ë¥¼ ëª©ì ìœ¼ë¡œ ì„¤ê³„ëœ ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ì˜ ê°ì²´ìƒì„±
 	EmployeeHandler handler;
 
-	// Á÷¿ø µî·Ï
-	handler.AddEmployee(new PermanentWorkter("KIM", 1000));		// Èü ¿µ¿ª¿¡ »ı¼º
+	// ì§ì› ë“±ë¡
+	handler.AddEmployee(new PermanentWorkter("KIM", 1000));		// í™ ì˜ì—­ì— ìƒì„±
 	handler.AddEmployee(new PermanentWorkter("LEE", 1500));
 	handler.AddEmployee(new PermanentWorkter("JUN", 2000));
 
-	// ÀÌ¹ø ´Ş¿¡ ÁöºÒÇØ¾ß ÇÒ ±Ş¿©ÀÇ Á¤º¸
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸‰ì—¬ì˜ ì •ë³´
 	handler.ShowAllSalaryInfo();
 
-	// ÀÌ¹ø ´Ş¿¡ ÁöºÒÇØ¾ß ÇÒ ±Ş¿©ÀÇ ÃÑÇÕ
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸‰ì—¬ì˜ ì´í•©
 	handler.ShowTotalSalary();
 	return 0;
 }

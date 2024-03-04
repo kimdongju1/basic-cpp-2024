@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int simObjCnt = 0;		// Àü¿ªº¯¼ö , SoSimpleÀÇ °´Ã¼ ¼ö¸¦ ¼¼±â À§ÇÑ °Í
-int cmxObjCnt = 0;		// Àü¿ªº¯¼ö , SoComplexÀÇ °´Ã¼ ¼ö¸¦ ¼¼±â À§ÇÑ °Í
+int simObjCnt = 0;		// ì „ì—­ë³€ìˆ˜ , SoSimpleì˜ ê°ì²´ ìˆ˜ë¥¼ ì„¸ê¸° ìœ„í•œ ê²ƒ
+int cmxObjCnt = 0;		// ì „ì—­ë³€ìˆ˜ , SoComplexì˜ ê°ì²´ ìˆ˜ë¥¼ ì„¸ê¸° ìœ„í•œ ê²ƒ
 
 class SoSimple
 {
 public:
 	SoSimple()
 	{
-		simObjCnt++;		// °´Ã¼°¡ »ı¼º µÉ¶§¸¶´Ù ÇØ´ç Àü¿ªº¯¼öÀÇ °ªÀÌ Áõ°¡ÇÏµµ·Ï, »ı¼ºÀÚ ³»¿¡¼­ Áõ°¡¿¬»ê
-		cout << simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;
+		simObjCnt++;		// ê°ì²´ê°€ ìƒì„± ë ë•Œë§ˆë‹¤ í•´ë‹¹ ì „ì—­ë³€ìˆ˜ì˜ ê°’ì´ ì¦ê°€í•˜ë„ë¡, ìƒì„±ì ë‚´ì—ì„œ ì¦ê°€ì—°ì‚°
+		cout << simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;
 	}
 };
 
@@ -19,24 +19,24 @@ class SoComplex
 public:
 	SoComplex() 
 	{
-		cmxObjCnt++;		// °´Ã¼°¡ »ı¼º µÉ¶§¸¶´Ù ÇØ´ç Àü¿ªº¯¼öÀÇ °ªÀÌ Áõ°¡ÇÏµµ·Ï, »ı¼ºÀÚ ³»¿¡¼­ Áõ°¡¿¬»ê
-		cout << cmxObjCnt << "¹ø¤Š SoComplex °´Ã¼" << endl;
+		cmxObjCnt++;		// ê°ì²´ê°€ ìƒì„± ë ë•Œë§ˆë‹¤ í•´ë‹¹ ì „ì—­ë³€ìˆ˜ì˜ ê°’ì´ ì¦ê°€í•˜ë„ë¡, ìƒì„±ì ë‚´ì—ì„œ ì¦ê°€ì—°ì‚°
+		cout << cmxObjCnt << "ë²ˆ? SoComplex ê°ì²´" << endl;
 	}
 	SoComplex(SoComplex& copy)
 	{
-		cmxObjCnt++;		// °´Ã¼°¡ »ı¼º µÉ¶§¸¶´Ù ÇØ´ç Àü¿ªº¯¼öÀÇ °ªÀÌ Áõ°¡ÇÏµµ·Ï, »ı¼ºÀÚ ³»¿¡¼­ Áõ°¡¿¬»ê
-		cout << cmxObjCnt << "¹ø¤Š SoComplex °´Ã¼" << endl;
+		cmxObjCnt++;		// ê°ì²´ê°€ ìƒì„± ë ë•Œë§ˆë‹¤ í•´ë‹¹ ì „ì—­ë³€ìˆ˜ì˜ ê°’ì´ ì¦ê°€í•˜ë„ë¡, ìƒì„±ì ë‚´ì—ì„œ ì¦ê°€ì—°ì‚°
+		cout << cmxObjCnt << "ë²ˆ? SoComplex ê°ì²´" << endl;
 	}
 };
 
 int main(void)
 {
-	SoSimple sim1;		// °´Ã¼ º¯¼ö
+	SoSimple sim1;		// ê°ì²´ ë³€ìˆ˜
 	SoSimple sim2;
 
 	SoComplex com1;		
 	SoComplex com2 = com1;
-	SoComplex();		// ÀÓ½Ã °´Ã¼ »ı¼º
+	SoComplex();		// ì„ì‹œ ê°ì²´ ìƒì„±
 
 	return 0;
 }

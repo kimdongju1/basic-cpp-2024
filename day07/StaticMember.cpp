@@ -4,33 +4,33 @@ using namespace std;
 class SoSimple
 {
 private:
-	static int simObjCnt;		// SoSimple ³»¿¡ ¼±¾ğµÈ static º¯¼öÀÌ´Ï, SoSimple °´Ã¼¿¡ ÀÇÇØ¼­ °øÀ¯µÈ´Ù.
+	static int simObjCnt;		// SoSimple ë‚´ì— ì„ ì–¸ëœ static ë³€ìˆ˜ì´ë‹ˆ, SoSimple ê°ì²´ì— ì˜í•´ì„œ ê³µìœ ëœë‹¤.
 public:
 	SoSimple()
 	{
-		simObjCnt++;		// ÀÌ·¸µí SoSimpleÀÇ ¸â¹öÇÔ¼ö(»ı¼ºÀÚ) ³»¿¡¼­´Â ¸¶Ä¡ ¸â¹öº¯¼öÀÎ °ÍÃ³·³ Á¢±ÙÀÌ °¡´ÉÇÏ´Ù. 
-		cout << simObjCnt << "¹øÂ° SoSimple °´Ã¼" << endl;	//	±×·¸´Ù°í static º¯¼ö¸¦ ¸â¹öº¯¼ö·Î ¿ÀÇØÇÏ¸é ¾ÈµÈ´Ù.
+		simObjCnt++;		// ì´ë ‡ë“¯ SoSimpleì˜ ë©¤ë²„í•¨ìˆ˜(ìƒì„±ì) ë‚´ì—ì„œëŠ” ë§ˆì¹˜ ë©¤ë²„ë³€ìˆ˜ì¸ ê²ƒì²˜ëŸ¼ ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤. 
+		cout << simObjCnt << "ë²ˆì§¸ SoSimple ê°ì²´" << endl;	//	ê·¸ë ‡ë‹¤ê³  static ë³€ìˆ˜ë¥¼ ë©¤ë²„ë³€ìˆ˜ë¡œ ì˜¤í•´í•˜ë©´ ì•ˆëœë‹¤.
 	}
 };
-int SoSimple::simObjCnt = 0;	// static º¯¼öÀÇ ÃÊ±âÈ­ ¹æ¹ıÀ» º¸ÀÌ°í ÀÖµû.
+int SoSimple::simObjCnt = 0;	// static ë³€ìˆ˜ì˜ ì´ˆê¸°í™” ë°©ë²•ì„ ë³´ì´ê³  ìˆë”°.
 
 class SoComplex
 {
 private:
-	static int cmxObjCnt;		// SoComplex ³»¿¡ ¼±¾ğµÈ static º¯¼öÀÌ´Ï, SoComplex °´Ã¼¿¡ ÀÇÇØ¼­ °øÀ¯µÈ´Ù.
+	static int cmxObjCnt;		// SoComplex ë‚´ì— ì„ ì–¸ëœ static ë³€ìˆ˜ì´ë‹ˆ, SoComplex ê°ì²´ì— ì˜í•´ì„œ ê³µìœ ëœë‹¤.
 public:
 	SoComplex()
 	{
-		cmxObjCnt++;			// ÀÌ·¸µí SoComplexÀÇ ¸â¹öÇÔ¼ö(»ı¼ºÀÚ) ³»¿¡¼­´Â ¸¶Ä¡ ¸â¹öº¯¼öÀÎ °ÍÃ³·³ Á¢±ÙÀÌ °¡´ÉÇÏ´Ù. 
-		cout << cmxObjCnt << "¹øÂ° SoComplex °´Ã¼" << endl;
+		cmxObjCnt++;			// ì´ë ‡ë“¯ SoComplexì˜ ë©¤ë²„í•¨ìˆ˜(ìƒì„±ì) ë‚´ì—ì„œëŠ” ë§ˆì¹˜ ë©¤ë²„ë³€ìˆ˜ì¸ ê²ƒì²˜ëŸ¼ ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤. 
+		cout << cmxObjCnt << "ë²ˆì§¸ SoComplex ê°ì²´" << endl;
 	}
 	SoComplex(SoComplex& copy)
 	{
-		cmxObjCnt++;			// ÀÌ·¸µí SoComplexÀÇ ¸â¹öÇÔ¼ö(»ı¼ºÀÚ) ³»¿¡¼­´Â ¸¶Ä¡ ¸â¹öº¯¼öÀÎ °ÍÃ³·³ Á¢±ÙÀÌ °¡´ÉÇÏ´Ù. 
-		cout << cmxObjCnt << "¹øÂ° SoComplex °´Ã¼" << endl;
+		cmxObjCnt++;			// ì´ë ‡ë“¯ SoComplexì˜ ë©¤ë²„í•¨ìˆ˜(ìƒì„±ì) ë‚´ì—ì„œëŠ” ë§ˆì¹˜ ë©¤ë²„ë³€ìˆ˜ì¸ ê²ƒì²˜ëŸ¼ ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤. 
+		cout << cmxObjCnt << "ë²ˆì§¸ SoComplex ê°ì²´" << endl;
 	}
 };
-int SoComplex::cmxObjCnt = 0;		// SoComplex¿¡ ¼±¾ğµÈ static º¯¼ö¸¦ ÃÊ±âÈ­ÇÏ°í ÀÖ´Ù.
+int SoComplex::cmxObjCnt = 0;		// SoComplexì— ì„ ì–¸ëœ static ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™”í•˜ê³  ìˆë‹¤.
 
 int main(void)
 {

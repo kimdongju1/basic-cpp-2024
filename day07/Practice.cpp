@@ -23,8 +23,8 @@ public:
 
 	void PersonInfo()  
 	{
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "ì´ë¦„: " << name << endl;
+		cout << "ë‚˜ì´: " << age << endl;
 	}
 	~Person()
 	{
@@ -35,7 +35,7 @@ public:
 
 int main(void)
 {
-	Person p("±èµ¿ÁÖ", 29);
+	Person p("ê¹€ë™ì£¼", 29);
 	p.PersonInfo();
 
 	Person copyp(p);

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class CountryArea		// const static »ó¼ö´Â ÇÏ³ªÀÇ Å¬·¡½º¿¡ µÑ ÀÌ»ó ¸ğÀÌ´Â °ÍÀÌ º¸ÅëÀÌ´Ù.
+class CountryArea		// const static ìƒìˆ˜ëŠ” í•˜ë‚˜ì˜ í´ë˜ìŠ¤ì— ë‘˜ ì´ìƒ ëª¨ì´ëŠ” ê²ƒì´ ë³´í†µì´ë‹¤.
 {
 public:
 	const static int RUSSIA = 1707540;
@@ -12,9 +12,9 @@ public:
 
 int main(void)
 {
-	cout << "·¯½Ã¾Æ ¸éÀû: " << CountryArea::RUSSIA << "§´" << endl;		// ±»ÀÌ °´Ã¼¸¦ »ı¼ºÇÒ ÇÊ¿ä´Â ¾ø´Ù.
-	cout << "Ä³³ª´Ù ¸éÀû: " << CountryArea::CANADA << "§´" << endl;		// ÀÌ·¸µí Å¬·¡½ºÀÇ ÀÌ¸§À» ÅëÇØ¼­ Á¢±ÙÇÏ´Â °ÍÀÌ ÆíÇÏ±âµµ ÇÏ°í,
-	cout << "Áß±¹ ¸éÀû: " << CountryArea::CHINA << "§´" << endl;		// Á¢±ÙÇÏ´Â ´ë»ó¿¡ ´ëÇÑ Á¤º¸¸¦ ½±°Ô ³ëÃâÇÏ´Â ¹æ¹ıÀÌ µÇ±âµµ ÇÑ´Ù.
-	cout << "ÇÑ±¹ ¸éÀû: " << CountryArea::SOUTH_KOREA << "§´" << endl;
+	cout << "ëŸ¬ì‹œì•„ ë©´ì : " << CountryArea::RUSSIA << "ã¢" << endl;		// êµ³ì´ ê°ì²´ë¥¼ ìƒì„±í•  í•„ìš”ëŠ” ì—†ë‹¤.
+	cout << "ìºë‚˜ë‹¤ ë©´ì : " << CountryArea::CANADA << "ã¢" << endl;		// ì´ë ‡ë“¯ í´ë˜ìŠ¤ì˜ ì´ë¦„ì„ í†µí•´ì„œ ì ‘ê·¼í•˜ëŠ” ê²ƒì´ í¸í•˜ê¸°ë„ í•˜ê³ ,
+	cout << "ì¤‘êµ­ ë©´ì : " << CountryArea::CHINA << "ã¢" << endl;		// ì ‘ê·¼í•˜ëŠ” ëŒ€ìƒì— ëŒ€í•œ ì •ë³´ë¥¼ ì‰½ê²Œ ë…¸ì¶œí•˜ëŠ” ë°©ë²•ì´ ë˜ê¸°ë„ í•œë‹¤.
+	cout << "í•œêµ­ ë©´ì : " << CountryArea::SOUTH_KOREA << "ã¢" << endl;
 	return 0;
 }

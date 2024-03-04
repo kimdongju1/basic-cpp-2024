@@ -11,7 +11,7 @@ private:
 public:
 	Person(const char* myname, int myage)
 	{
-		cout << "ºÎ¸ð »ý¼ºÀÚ ½ÇÇà" << endl;
+		cout << "ä½•è‘› ç§¯å·±ç£Š è§’é’" << endl;
 		age = myage;
 		strcpy(name, myname);
 	}
@@ -32,9 +32,9 @@ public:
 	UnivStudent(const char* myname, int myage, string major)
 		: Person(myname, myage)
 	{
-		cout << "ÀÚ½Ä »ý¼ºÀÚ ½ÇÇà" << endl;
+		cout << "ç£Šä¾¥ ç§¯å·±ç£Š è§’é’" << endl;
 		this->major = major;
-		//this->age = myage; // private ´ë½Å portected ½á¾ßÇÔ
+		//this->age = myage; // private æŽªè„š portected ç»“å…·çªƒ
 	}
 	void WhoAreYou() const
 	{

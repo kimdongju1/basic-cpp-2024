@@ -15,8 +15,8 @@ public:
 	}
 	void WhatYourInfo()
 	{
-		cout << "³» ÀÌ¸§Àº : " << name << endl;
-		cout << "³» ³ªÀÌ´Â : " << age << endl;
+		cout << "ë‚´ ì´ë¦„ì€ : " << name << endl;
+		cout << "ë‚´ ë‚˜ì´ëŠ” : " << age << endl;
 	}
 	
 
@@ -32,18 +32,18 @@ public:
 	void printMyInfo() const
 	{
 		WhatYourInfo();
-		cout << "ÀüÈ­¹øÈ£´Â: " << pNumber << endl <<endl;
+		cout << "ì „í™”ë²ˆí˜¸ëŠ”: " << pNumber << endl <<endl;
 		
-		//"³ªÀÇ ÀÌ¸§Àº xxxÀÌ°í ³ªÀÌ´Â xx »ìÀÌ¸ç ÀüÈ­¹øÈ£´Â xxxx ÀÔ´Ï´Ù.";
+		//"ë‚˜ì˜ ì´ë¦„ì€ xxxì´ê³  ë‚˜ì´ëŠ” xx ì‚´ì´ë©° ì „í™”ë²ˆí˜¸ëŠ” xxxx ìž…ë‹ˆë‹¤.";
 	}
 };
 
 int main(void)
 {
-	Myinfo p1("±èµ¿ÁÖ", 29 , "010-1234-5678");
+	Myinfo p1("ê¹€ë™ì£¼", 29 , "010-1234-5678");
 	p1.WhatYourInfo();
 	return 0;
 };
 
-// MyInfo °´Ã¼¸¦ »ý¼ºÇÑ´Ù.
-// MyInfo°³Ã¼.printMyInfo(); ¸¦ È£ÃâÇÑ´Ù. "³ªÀÇ ÀÌ¸§Àº xxxÀÌ°í ³ªÀÌ´Â xx »ìÀÌ¸ç ÀüÈ­¹øÈ£´Â xxxx ÀÔ´Ï´Ù.";
+// MyInfo ê°ì²´ë¥¼ ìƒì„±í•œë‹¤.
+// MyInfoê°œì²´.printMyInfo(); ë¥¼ í˜¸ì¶œí•œë‹¤. "ë‚˜ì˜ ì´ë¦„ì€ xxxì´ê³  ë‚˜ì´ëŠ” xx ì‚´ì´ë©° ì „í™”ë²ˆí˜¸ëŠ” xxxx ìž…ë‹ˆë‹¤.";
