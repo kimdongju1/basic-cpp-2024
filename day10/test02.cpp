@@ -3,6 +3,7 @@
 */
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Grade
@@ -14,11 +15,16 @@ class Grade
 public:
 	Grade(const char* name, int ko, int eng, int math)
 	{
-		this->name = new char[strlen(name) + 1];
+		name = new char[strlen(name) + 1];
 		strcpy(this->name, name);
 		this->ko = ko;
 		this->eng = eng;
 		this->math = math;
+	}
+	Grade()
+	{
+		cout << "생성자 호출" << endl;
+		
 	}
 	~Grade()
 	{
@@ -47,7 +53,7 @@ public:
 		double avr = sum() / 3.0;
 		return avr;
 	}
-	
+
 
 
 };
@@ -56,7 +62,8 @@ public:
 
 int main()
 {	// 1. 입력을 받는다.
-	Grade* gradeAry[3];		// 객체 포인터 배열 
+	//Grade* gradeAry[3];		// 객체  배열 
+	//Grade gradeAry[3];
 
 	char name[20];
 	int inKo;
@@ -65,9 +72,15 @@ int main()
 	int kosum = 0;
 	int engsum = 0;
 	int mathsum = 0;
+	int num;
+
+	cout << "성적처리 학생수 : " << endl;
+	cin >> num;
+	vector<Grade> gradeAry(num);
+	
 
 	// 1. 입력을 받는다.
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < num; i++) {
 		cout << "이름 : ";
 		cin >> name;
 		cout << "국어 점수 : ";
@@ -79,19 +92,19 @@ int main()
 
 		cout << name << inKo << inEng << inMath << endl;
 		// 2. 객체생성 : 5개의 객체를 생성(2). 객체배열 or 객체 포인터 배열
-		gradeAry[i] = new Grade(name, inKo, inEng, inMath);
+		gradeAry[i] = Grade(name, inKo, inEng, inMath);
 	}
-	
 
-	for (int i = 0; i < 3; i++) {
-		cout << "총점 : " << gradeAry[i]->sum() << " 평점 : " << gradeAry[i]->avr() << endl;
-		printf("%d번째 학생 총점 : %d,  평점 : %.1lf\n", i+1, gradeAry[i]->sum(), gradeAry[1]->avr());
+
+	for (int i = 0; i < num; i++) {
+		cout << "총점 : " << gradeAry[i].sum() << " 평점 : " << gradeAry[i].avr() << endl;
+		printf("%d번째 학생 총점 : %d,  평점 : %.1lf\n", i + 1, gradeAry[i].sum(), gradeAry[i].avr());
 	}
-	for (int i = 0; i < 3; i++) {
-		kosum += gradeAry[i]->getKo();
-		engsum += gradeAry[i]->getEng();
-		mathsum += gradeAry[i]->getMath();
-		
+	for (int i = 0; i < num; i++) {
+		kosum += gradeAry[i].getKo();
+		engsum += gradeAry[i].getEng();
+		mathsum += gradeAry[i].getMath();
+
 	}
 
 	cout << " 국어성적 총점 : %d" << kosum << "국어성적 평균 : %.1lf\n" << endl;
@@ -99,9 +112,8 @@ int main()
 	cout << " 수학성적 총점 : %d" << mathsum << "수학성적 평균 : %.1lf\n" << endl;
 
 
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < num; i++) {
 		printf("객체 할당 소멸자 호출");
-		delete gradeAry[i];
 	}
 	return 0;
 }
