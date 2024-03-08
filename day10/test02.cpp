@@ -62,8 +62,8 @@ public:
 
 int main()
 {	// 1. 입력을 받는다.
-	//Grade* gradeAry[3];		// 객체  배열 
-	//Grade gradeAry[3];
+	//Grade* gradeAry[3];		// 객체 포인터 배열 
+	//Grade gradeAry[3];		// 객체 배열
 
 	char name[20];
 	int inKo;
@@ -76,10 +76,10 @@ int main()
 
 	cout << "성적처리 학생수 : " << endl;
 	cin >> num;
-	vector<Grade> gradeAry(num);
+	vector<Grade> gradeAry(num);			// 동적으로 배열을 할당 받는다. 
 	
 
-	// 1. 입력을 받는다.
+	// 1. 입력을 받는다. ----> 5개 입력
 	for (int i = 0; i < num; i++) {
 		cout << "이름 : ";
 		cin >> name;
