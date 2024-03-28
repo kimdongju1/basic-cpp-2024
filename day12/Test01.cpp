@@ -1,3 +1,7 @@
+/*	File : Test01.c++
+    Created: 24-03-26
+    Author : 김동주
+*/
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -13,6 +17,9 @@ public:
         : id(id), price(price), producer(producer) {}
 
     virtual void printDetails() const = 0; 
+    int getId() const {
+        return id;
+    }
 };
 class Book : public Product {
     string ISBN;
@@ -21,7 +28,9 @@ class Book : public Product {
 public:
     Book(int id, double price, const string& producer, const string& ISBN, const string& author, const string& title)
         : Product(id, price, producer), ISBN(ISBN), author(author), title(title) {}
-
+    void printDetails() const override {
+        cout << "ID: " << id << ", Price: " << price << ", Producer: " << producer << ", ISBN: " << ISBN << ", Author: " << author << ", Title: " << title << endl;
+    }
 };
 
 class Handphone : public Product {
@@ -30,7 +39,9 @@ class Handphone : public Product {
 public:
     Handphone(int id, double price, const string& producer, const string& model, int RAM)
         : Product(id, price, producer), model(model), RAM(RAM) {}
-
+    void printDetails() const override {
+        cout << "ID: " << id << ", Price: " << price << ", Producer: " << producer << ", Model: " << model << ", RAM: " << RAM << endl;
+    }
 };
 
 class Computer : public Product {
@@ -40,11 +51,10 @@ class Computer : public Product {
 public:
     Computer(int id, double price, const string& producer, const string& model, const string& cpu, int RAM)
         : Product(id, price, producer), model(model), cpu(cpu), RAM(RAM) {}
+    void printDetails() const override {
+        cout << "ID: " << id << ", Price: " << price << ", Producer: " << producer << ", Model: " << model << ", CPU: " << cpu << ", RAM: " << RAM << endl;
+    }
 };
-
-
-
-
 
 
 int main() {
@@ -62,6 +72,14 @@ int main() {
         int choice;
         cin >> choice;
 
+        if (cin.fail()) {
+            cout << "잘못된 입력입니다. 숫자를 입력해주세요." << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            continue;
+        }
+
+     
         switch (choice) {
         case 1: {
             cout << "1. 책 추가 2. 핸드폰 추가 3. 컴퓨터 추가" << endl;
@@ -123,10 +141,26 @@ int main() {
                 products[i]->printDetails();
             }
             break;
-        case 3:
+        case 3: {
             cout << "상품 검색" << endl;
+            cout << "검색할 제품 ID를 입력하세요: ";
+            int searchId;
+            cin >> searchId;
 
+            bool found = false;
+            for (int i = 0; i < numProducts; i++) {
+                if (products[i]->getId() == searchId) {
+                    cout << "상품을 찾았습니다:" << endl;
+                    products[i]->printDetails();
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                cout << "해당 ID의 상품을 찾을 수 없습니다." << endl;
+            }
             break;
+        }
         case 0:
             cout << "프로그램을 종료합니다." << endl;
             return 0;
